@@ -1,1 +1,3 @@
+DEPLOYMENT
+
 maintains set of identical pods. ensures same config is present in all pods. and it make sure secified number of pods are always up and running
