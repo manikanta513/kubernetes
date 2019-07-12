@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Deployment 
+metadata:
+    name: deployment-pod
+spec:
+   relipcas: 2
+   selector:
+	matchLabels:
+	 component: web
+   template:
+      metadata:
+		labels:
+		  component: web
+      spec:	 
+	containers:
+         - name: client
+           image: nginix
+           ports:
+            - containerport: 3000
