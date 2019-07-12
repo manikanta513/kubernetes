@@ -1,0 +1,13 @@
+POD:
+
+each pod can have  more than one containers. which are dependent on each other . 
+
+disadvantage of pods : by passing config files to the kubectl we can update the containers images in pods. but we cant replicate the containers so we have to use object of type deployment.
+
+refer to the file client-pod.yaml (this file has config of pod creation)
+
+SERVICES:
+
+it setup network for the pods created in kuberenetes cluster
+
+refer to the file client-network.yaml (this file has config of network creation)
