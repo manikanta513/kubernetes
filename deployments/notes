@@ -1,3 +1,10 @@
 DEPLOYMENT
 
 maintains set of identical pods. ensures same config is present in all pods. and it make sure secified number of pods are always up and running
+
+
+....imperative command syntax to update version of application running in pods
+
+command: kubectl set image <objecttype>/<objectname> <container_name>=<dockerhub_image>
+
+eg: kubectl set image deployment/deployment-pod clinet=manikanta513/multi-client:v2
