@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: deployment-worker
+spec:
+   replicas: 1
+   selector:
+    matchLabels:
+     component: worker
+   template:
+     metadata:
+       labels:
+        component: worker
+     spec:
+        containers:
+         - name: multi-worker
+           image: manikanta513/multi-worker
+           
