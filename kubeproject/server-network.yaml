@@ -1,0 +1,11 @@
+apiVersion: v1
+type: Network
+meta-data:
+ name: server-clusterip
+spec:
+ type: clusterIP
+ ports:
+  - port: 5000
+    targetPort: 5000
+ selector:
+    component: server 
