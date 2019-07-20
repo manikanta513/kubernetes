@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: deployment-client
+spec:
+   replicas: 3
+   selector:
+    matchLabels:
+     component: client
+   template:
+     metadata:
+       labels:
+        component: client
+     spec:
+        containers:
+         - name: multi-client
+           image: manikanta513/multi-client
+           ports:
+            - containerPort: 5000
