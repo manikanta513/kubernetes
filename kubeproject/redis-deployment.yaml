@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+meta-data:
+    name: redis
+spec:
+ replicas:1
+ selector:
+    matchLabels:
+      component: cache
+ template:
+   meta-data:
+    labels:
+      component: cache
+   spec:
+    containers:
+     - name: redis
+       image: redis
+       ports:
+            - containerPort: 6379
+    
