@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistantVolumeClaim
+meta-data:
+ name: postgers-persistant-volume
+spec:
+    accessModes:
+        - ReadWriteOnce:
+    resources:
+        requests:
+            storage: 2Gi
+        
+	
